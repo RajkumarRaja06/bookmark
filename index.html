@@ -30,7 +30,7 @@
       <div class="title">
         <h3>Bookmarker</h3>
       </div>
-      <form>
+      <form id="submit">
         <div class="form-title">Bookmark your favorite website</div>
         <div class="input">
           <label for="inputName" class="name">Site Name</label>
@@ -39,9 +39,9 @@
             id="inputName"
             class="inputName"
             placeholder="Bookmark Name"
-            required
+            onclick="nameFunction()"
           />
-          <div class="msg">
+          <div class="msg" id="msg1">
             <p class="msg-para">This Name is Not Valid</p>
             <p class="msg-para">Example: Google</p>
           </div>
@@ -49,13 +49,13 @@
         <div class="input">
           <label for="inputURL" class="website">Site URL</label>
           <input
-            type="url"
+            type="text"
             id="inputURL"
             class="inputURL"
             placeholder="Website URL "
-            required
+            onclick="urlFunction()"
           />
-          <div class="msg">
+          <div class="msg" id="msg2">
             <p class="msg-para">This URL Is Not Valid</p>
             <p class="msg-para">Example: http://www.google.com</p>
           </div>
@@ -63,7 +63,7 @@
         <input type="submit" value="Submit" class="submit-btn" />
       </form>
       <input
-        type="search"
+        type="text"
         class="searchInput"
         placeholder="Search By Bookmark Name"
       />
@@ -77,16 +77,7 @@
           </li>
         </ul>
         <ul class="output-data">
-          <li>
-            <div class="">1</div>
-            <div class="">Google</div>
-            <div class=""><a href="#">www.google.com</a></div>
-            <div class="icon-container">
-              <i class="fas fa-pencil-alt" id="editIcon"></i>
-
-              <i class="far fa-trash-alt" id="deleteIcon"></i>
-            </div>
-          </li>
+          <li></li>
         </ul>
       </div>
     </main>
