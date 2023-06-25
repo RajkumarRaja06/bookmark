@@ -100,7 +100,7 @@ const addItem = (lists) => {
     liEl.innerHTML = `
       <div>${index + 1}</div>
       <div>${name}</div>
-      <div><a href=${url}>${url}</a></div>
+      <div><a href=${url} target="_blank">${url}</a></div>
       <div class="icon-container">
         <i class="far fa-trash-alt" id="deleteIcon" onclick="deleteItem(${id})"></i>
       </div>`;
